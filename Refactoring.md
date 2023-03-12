@@ -9,3 +9,5 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+I create two helper functions to prevent code repetition, that way not only the main method here gets less noisy it also prevents that if a change is needed the dev working on it doesn't forget to change it in all the places it appears. I also added an early return, so its clear for who is reading the code that if no input is sent to the method TRIVIAL_PARTITION_KEY will be the return. I removed the use of let and left only constants that way being easier to follow what happens with a variable. On the tests I tried to cover as much scenarios as possibles, even a wrong typing being sent on the input.
